@@ -69,9 +69,7 @@ main{
     box-shadow: 0px 0px 5px 5px #999999; 
     display: flex;
     margin-top: 80px;
-    margin-bottom: 20px;
-    
-    
+    margin-bottom: 20px;      
 }
 
 #left{
@@ -268,14 +266,10 @@ main{
     display: flex;
     margin-left: 30px;
     margin-right: 45px;
-    
-}
-
-#skill-rs{
-    margin-left: 30px;
     margin-top: 30px;
     gap: 30px;
 }
+
 
 .progress{
     background: #333; 
@@ -328,17 +322,42 @@ main{
 }
 
 #flex-ct{
-    display: flex;
+    
     margin-top: 20px;
     margin-left: 30px;
-   justify-content: space-between;
+    
 
 }
 
-#flex-ite{
+.flex-ite{
     margin-right: 35px;
 }
 
+#sp{
+    display: flex;
+    margin-left: 30px;
+
+ }
+
+ #chs{
+    margin-top: 20px;
+    margin-left: 20px;
+
+ }
+
+.flex-it{
+    justify-content: space-between;
+}
+.flex-ite{
+    justify-content: space-between;
+}
+#lnn{
+    margin-right: 65px;
+}
+
+#mbn{
+    margin-right: 30px;
+}
 .ip{
     width: 300px;
 }
@@ -361,12 +380,17 @@ main{
     padding: 12px 0 12px 0;
     margin-bottom: 30px;
 }
+#send{
+    position: relative;
+}
 
 i{
     position: absolute;
-   margin-top: 3.1px;
-   margin-left: 2px;
+    margin-top: 3.1px;
+    margin-left: 2px;
 }
+
+
 
 input::placeholder{
     position: relative;
@@ -377,9 +401,7 @@ input{
     padding-left: 20px;
 }
 
-#send{
-    position: relative;
-}
+
 
 form input{
     margin-bottom: 15px;
@@ -389,11 +411,313 @@ footer{
     background-color: black;
     color: #fff;
     text-align: center;
+    width: 100%;
     padding: 10px 0 10px 0;
 }
 
 
+/*Mobile nav*/
+.menu{
+    font-size: 25px;
+    margin-top: 10px;
+    margin-right: 5px;
+    color: #fff;
+    display: none;
+    
+}
 
 
-  
-  
+.nav__overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0, 0.3);
+    display: none;
+    animation: fadein linear 0.2s;
+   
+}
+
+.nav_mobile{
+    position: fixed;
+    display: contents;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 320px;
+    max-width: 100%;
+    background-color: white;
+    display: block;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform linear 0.2s, opacity linear 0.2s ;
+    
+}
+#nav_it_mb{
+    margin-top: 45px;
+    
+}
+
+.items{
+    margin-left: 15px;
+    color: black;
+    display: block;
+    padding: 8px 0;
+    font-size: 1rem;
+}
+
+.nav_close{
+    font-size: 28px;
+    color: #666;
+    position: absolute;
+    margin-top: 15px;
+    right: 0;
+    margin-right: 30px;
+}
+
+.nav__ip:checked ~ .nav__overlay{
+    display: block;
+}
+
+.nav__ip:checked ~ .nav_close{
+    display: block;
+}
+
+.nav__ip:checked ~ .nav_mobile{
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+.flex-it{
+    display: flex;
+}
+
+    .flex-ite{
+        display: flex;
+    }
+
+@keyframes fadein{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+/*mobile*/
+@media screen and (max-width: 740px){
+    
+    main{   
+        width: 100%;  
+        flex-direction: column;
+    }
+    
+    #left{
+        width: 100%;
+        padding-left: 55px;
+    }
+    #right{
+        width: 100%;
+    }
+
+    .menu{
+        display: block;
+        margin-left: 100px;
+        margin-right: 30px;
+        
+    }
+    .nav_item{
+        display: none;
+    }
+    
+    
+    section{
+        margin-left: -25px;
+        padding-left: 20px;
+        width: 100%;
+    }
+    
+    #ex .ex-date , #ex2 .ex-date{
+        text-align: left;
+        
+    }
+    #ex .ex-content , #ex2 .ex-content{
+        width: 100%;
+        margin-left: 0px;
+    }
+    
+
+    #skill-rs{
+        display: block;
+    }
+   
+    #hobbies .im{  
+        margin-left: 20px;
+        width: 50px;   
+    }
+
+    #flex-ct{
+        display: block;
+    }
+    
+
+    #cmt textarea, #cmt button{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    } 
+    .heading-rs{
+        padding: 2px; 
+        border-bottom: 1px solid black; 
+        border-top: 1px solid black; 
+        color: black; 
+        margin-left: 80px; 
+        line-height: 30px;
+        text-transform: uppercase;
+        margin-top: 85px;
+        width: 85%;
+    }
+    .objective p{
+        width: 98%;
+    }
+    
+    #nav-3{
+        margin-left: 20px;
+        padding: 0;
+    }
+    #edu{
+        width: 92%;   
+        border-bottom: none;
+    }
+    #nav-bar{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    #edu-content{
+        width: 100%;
+        border-bottom:1px #666 solid ;
+    }
+    
+   #nav-it {
+        padding: 0;
+        margin-left: 100px;
+        
+    }
+    #edu-qu{
+        margin: 0px;
+        padding-left:20px ;
+        
+    }
+    #edu-pl{
+        margin: 0px;
+        padding-left: 38px;
+        width: 100%;
+        
+    }
+    #edu-pl .st{
+        padding-bottom: 15px;
+       
+    }
+    
+    #form-a{
+        width: 95%;
+    }
+
+    .flex-ite{
+        width: 100%;
+    }
+    #skill-rs{
+        width: 95%;
+    }
+    .progress{
+        width: 100%; 
+    }
+
+    #sp{
+        width: 100%;
+        display: block;
+    }
+
+    #chs{
+        margin-left: 4px;
+        margin-top: 20px;
+    }
+
+    .flex-it{
+        width: 100%;
+        display: block;
+    }
+    
+        .flex-ite{
+            width: 100%;
+            display: block;
+        }
+    
+    
+    .ip{
+        width: 95%;
+    }
+    #sll{
+        width: 89%;
+    }
+    }
+
+
+
+   .xanh.success input{
+    border-color: #09c372;
+   }
+
+   #red.error input {
+    border-color: #ff3860;
+    }
+    .flex-it .error {
+    display: block;
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
+    position: relative;
+    margin-bottom:50px ;
+    }
+
+.flex-ite.success input{
+    border-color: #09c372;
+   }
+
+   #r.error input {
+    border-color: #ff3860;
+        }
+
+        #e.error input {
+            border-color: #ff3860;
+                }
+                #d.error input {
+                    border-color: #ff3860;
+                        }
+.flex-ite .error {
+    display: block;
+    color: #ff3860;
+    font-size: 9px;
+    
+}
+
+#cmt .error {
+    display: block;
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
+    }
+
+    #chs{
+        margin-right: 50px;
+        display: block;
+    }
+#chs .error {
+    
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
+}

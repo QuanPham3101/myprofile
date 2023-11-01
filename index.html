@@ -21,8 +21,30 @@
             <a href="#education">EDUCATION</a>
             <a href="#contact">CONTACT</a>
         </nav>
-    </header>
 
+         <label for="nav_mb_ip" class="menu">
+            <i id="nav-menu" class="fa fa-bars" aria-hidden="true"></i>
+         </label>
+
+        
+        <input type="checkbox" hidden name="" class="nav__ip" id="nav_mb_ip">
+
+
+        <label for="nav_mb_ip" class="nav__overlay"></label>   
+
+        <nav class="nav_mobile">
+            <label for="nav_mb_ip" class="nav_close">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </label>
+            <nav id="nav_it_mb">
+            <a class="items" href="#skill">SKILLS</a> <br>
+            <a class="items" href="#experience">EXPERIENCE</a> <br>
+            <a class="items" href="#education">EDUCATION</a> <br>
+            <a class="items" href="#contact">CONTACT</a>
+            </nav>
+        </nav>
+    </header>
+ 
     <main>
         <aside id="left">
             <section id="avatar">
@@ -133,18 +155,17 @@
                         </div>
 
                         <div id="edu-qu">
-
-                            <p>University</p>
-                            <p>Hight school education</p>
-                            <p>Secondary school education</p>
-                            <p>Primary school education</p>
+                            <p class="st">University</p>
+                            <p class="st">Hight school education</p>
+                            <p class="st">Secondary school education</p>
+                            <p class="st">Primary school education</p>
                         </div>
 
                         <div id="edu-pl">
-                            <p>FPT University</p>
-                            <p>Thanh Tay High school</p>
-                            <p>Thanh Dong Secondary school</p>
-                            <p>Thanh Dong B Primary school</p>
+                            <p class="st">FPT University</p>
+                            <p class="st">Thanh Tay High school</p>
+                            <p class="st">Thanh Dong Secondary school</p>
+                            <p class="st">Thanh Dong B Primary school</p>
                         </div>
                     </div>
                 </div>
@@ -153,6 +174,7 @@
             <section id="skill">
                 <img class="img-rs" src="./Img/edu.png" alt="">
                 <h3 class="heading-rs">skill</h3>
+
                 <div id="skill-rs">
                     <div class="skill-l">
                         <p>HTML</p>
@@ -177,11 +199,11 @@
                 <h3 class="heading-rs">hoppy</h3>
 
                 <div id="hobbies">
-                    <img src="./Img/bicycle.png" alt="">
-                    <img src="./Img/book.png" alt="">
-                    <img src="./Img/chess.png" alt="">
-                    <img src="./Img/games.png" alt="">
-                    <img src="./Img/design.png" alt="">
+                    <img class="im" src="./Img/bicycle.png" alt="">
+                    <img class="im" src="./Img/book.png" alt="">
+                    <img class="im" src="./Img/chess.png" alt="">
+                    <img class="im" src="./Img/games.png" alt="">
+                    <img class="im" src="./Img/design.png" alt="">
                 </div>
 
             </section>
@@ -190,52 +212,86 @@
                 <img class="img-rs" src="./Img/hobbies.png" alt="">
                 <h3 class="heading-rs">contact</h3>
 
-                <form>
+                <form id="form-a" novalidate>
+                    
                     <div id="flex-ct">
-                        <div id="flex-it">
-                            <label for="first_name">First Name</label><br>
+                        <div class="flex-it" >
+                            <div class="xanh" id="red">
+                                <label for="first_name">First Name</label><br>
                             <i class="fas fa-user"></i>
-                            <input class="ip" type="text" placeholder="Type first name" name="first_name">
-                            <br>
+                            <input id="name" class="ip" type="text"  placeholder="Type first name" name="first_name">
+                            <span id="name-error" class="error"></span>
+                            </div>
 
-                            <label for="mail">Email</label><br>
+                            <div class="xanh" id="e">
+                                <label for="Last_name">Last Name</label><br>
+                                <i class="fas fa-user"></i>
+                                <input id="lnn" class="ip" type="text" placeholder="Type last name" name="Last_name">
+                                <span id="name-error" class="error"></span>
+                                
+                            </div>
+                        
+                        </div>
+                        
+                        <div class="flex-ite">
+
+                           <div class="xanh" id="r">
+                            
+                             <label for="mail">Email</label><br>
                             <i class="fa fa-envelope" aria-hidden="true"></i>
-                            <input class="ip" type="email" placeholder="Type email address 1234@gmail.com" name="mail">
+                            <input id="e-mail" class="ip" type="email" placeholder="Type email address 1234@gmail.com" name="mail">
+                            <span id="name-error" class="error"></span>
+                            
+                           </div>
+
+                           <div class="xanh" id="d">
+                            <label for="number">Mobile No</label><br>
+                            <i class="fa fa-phone-square" aria-hidden="true"></i>
+                            <input id="mbn" class="ip" type="number"  placeholder="Type phone no" name="number">
+                            <span id="name-error" class="error"></span>
                             <br>
-                            Support: <br>
-                            <select class="ip" name="Support" id="">
+                           </div>
+                            
+                            
+                        </div>
+                    </div>
+
+                    <div id="sp" class="flex-it">
+                        <div>
+                            <p>Support:</p>
+                            <select  class="ip" name="" id="sll">
                                 <option value="">HTML</option>
-                                <option value="">CSharp</option>
                                 <option value="">Java</option>
+                                <option value="">CSharp</option>
                                 <option value="">CSS</option>
                             </select>
                         </div>
+                        <div id="chs" class="flex-ite">
+                            Choose intersts: 
+                            <input type="checkbox" > Java
+                            <input type="checkbox" > CSharp
+                            <input type="checkbox" > HTML
+                            <input type="checkbox" > CSS
 
-                        <div id="flex-ite">
-                            <label for="Last_name">Last Name</label><br>
-                            <i class="fas fa-user"></i>
-                            <input class="ip" type="text" placeholder="Type last name" name="Last_name">
-                            <br>
-                            <label for="number">Mobile No</label><br>
-                            <i class="fa fa-phone-square" aria-hidden="true"></i>
-                            <input class="ip" type="number" placeholder="Type phone no" name="number">
-                            <br>
-                            Choose interests: <br>
-                            <input type="checkbox">Java
-                            <input type="checkbox">CSharp
-                            <input type="checkbox">HTML
-                            <input type="checkbox">CSS
+                            <div>
+                                <span id="name-error" class="error"></span>
+
+                            </div>
                         </div>
+                        
+                        
                     </div>
+
 
                     <div id="cmt">
                         Comments or Message :
                         <br>
-                        <textarea name="content" id="" cols="30" rows="5"></textarea>
+                        <textarea id="text_ar" name="content" id="" cols="30" rows="5"></textarea>
                         <br>
-                        <button type="send"> <i id="send" class="fa fa-paper-plane" aria-hidden="true"> </i> Send
-                            Message</button>
-
+                        <span id="name-error" class="error"></span>
+                        <br>
+                        <button  type="submit"> <i id="send" class="fa fa-paper-plane" aria-hidden="true"> </i> Send Message</button>
+                        
                     </div>
                 </form>
 
@@ -253,6 +309,10 @@
             <p>&copy; Coppyright 2023, Design by Pham Quan</p>
         </div>
     </footer>
+
+    <script src="./Js/main.js"></script>
+    
+
 </body>
 
 </html>
